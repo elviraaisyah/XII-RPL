@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XII RPL</title>
+    <style>
+        /* Gaya untuk header tetap */
+.sticky-header {
+    position: fixed; /* Menjaga header tetap di atas */
+    top: 0;
+    width: 100%; /* Lebar penuh */
+    background-color: linear-gradient(45deg, #4facfe, #00f2fe, #a1c4fd, #c2e9fb, #4facfe); /* Soft blue and teal with light accents */ /* Warna latar belakang */
+    color: #333; /* Warna teks */
+    z-index: 1000; /* Menempatkan header di atas elemen lain */
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    text-align: center;
+}
+
+.sticky-header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.sticky-header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.sticky-header nav ul li {
+    margin: 0 15px;
+}
+
+.sticky-header nav ul li a {
+    text-decoration: none;
+    color: linear-gradient(45deg, #4facfe, #00f2fe, #a1c4fd, #c2e9fb, #4facfe); /* Soft blue and teal with light accents */ 
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.sticky-header nav ul li a:hover {
+    color: #2c3e50, #00f2fe, #4facfe; /* Warna teks saat hover */
+}
+
+/* Tambahkan ruang agar konten tidak tertutup oleh header */
+body {
+    padding-top: 70px; /* Sesuaikan dengan tinggi header */
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Multicolor blue aesthetic gradient animation */
+    background: linear-gradient(45deg, #4facfe, #00f2fe, #a1c4fd, #c2e9fb, #4facfe); /* Soft blue and teal with light accents */
+    background-size: 400% 400%;
+    animation: colorfulGradientAnimation 10s ease infinite;
+}
+
+/* Header Styling */
+header {
+    background-color: rgba(76, 119, 175, 0.9); /* Semi-transparent to show the background behind */
+    color: rgb(177, 192, 224);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #435579;
+}
+
+/* Navigation Bar Styling */
+nav {
+    background-color: rgba(97, 158, 194, 0.9); /* Slightly transparent to blend with background */
+    color: rgb(177, 192, 224);
+    padding: 15px;
+    text-align: center;
+}
+
+/* Navigation Links Styling */
+nav a {
+    color: rgb(18, 18, 19);
+    padding: 16px 24px;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #b8d5fc;
+    color: hsl(228, 24%, 51%);
+}
+
+/* Main Content Container */
+.container {
+    padding: 30px;
+}
+
+/* Section Titles */
+h2 {
+    color: #435579;
+    font-size: 24px;
+}
+section {
+padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: #bff5fc;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+section h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #435579;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+#home {
+            background: linear-gradient(45deg, #4facfe, #00f2fe, #a1c4fd, #c2e9fb, #4facfe); /* Soft blue and teal with light accents */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #home h1 {
+            font-size: 3rem;
+            color: #4facfe;
+        }
+/* Card Styling */
+.id-card {
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb, #00f2fe, #09a6ce);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 15px;
+    margin: 10px auto;
+    color: #333;
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.id-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.id-card h3 {
+    font-size: 18px;
+    color: #435579;
+    margin-bottom: 10px;
+}
+
+.id-card p {
+    font-size: 14px;
+    line-height: 1.8;
+    white-space: pre-line; /* Untuk menjaga format baris */
+}
+/* Biodata Paragraph Styling */
+.biodata p {
+    margin: 15px 0;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.biodata p strong {
+    display: inline-block;
+    width: 120px;
+    text-align: left;
+}
+
+/* Colorful Gradient Animation */
+@keyframes colorfulGradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Add a subtle animation effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Apply the fadeIn animation to the container */
+.container {
+    animation: fadeIn 1s ease-in-out;
+}
+#struktur-kelas {
+    text-align: center;
+    padding: 20px;
+    background-color: linear-gradient(45deg, #4facfe, #00f2fe, #a1c4fd, #c2e9fb, #4facfe); /* Soft blue and teal with light accents */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+    overflow-x: auto; /* Memastikan tidak ada elemen yang terpotong */
+}
+
+#struktur-kelas h2 {
+    color: #435579;
+    margin-bottom: 20px;
+}
+
+.struktur-container {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: scroll; /* Menambahkan scroll horizontal untuk layar kecil */
+    padding: 10px;
+    scrollbar-width: thin; /* Custom scrollbar untuk browser modern */
+    scrollbar-color: #4facfe transparent;
+}
+
+.struktur-container::-webkit-scrollbar {
+    height: 8px; /* Scrollbar horizontal */
+}
+
+.struktur-container::-webkit-scrollbar-thumb {
+    background-color: #4facfe;
+    border-radius: 10px;
+}
+
+.struktur-item {
+    flex: 0 0 300px; /* Set setiap elemen dengan lebar tetap */
+    background: linear-gradient(45deg, #4facfe, #00f2fe, #a1c4fd, #c2e9fb, #4facfe); /* Soft blue and teal with light accents */
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.struktur-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.struktur-item h3 {
+    color: #435579;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.struktur-item p {
+    font-size: 14px;
+    color: #333;
+    margin: 5px 0;
+}
+
+.back-to-top {
+    display: inline-block;
+    margin-top: 20px;
+    color: #4facfe;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.back-to-top:hover {
+    color: #345fc4;
+}
+/* Styling untuk Section Data Siswa */
+#data-siswa {
+    text-align: center;
+    padding: 20px;
+    background-color:linear-gradient(45deg, #4facfe, #00f2fe, #a1c4fd, #c2e9fb, #4facfe); /* Soft blue and teal with light accents */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+#data-siswa h1 {
+    font-size: 24px;
+    color: #435579;
+    margin-bottom: 20px;
+}
+
+/* Grid Layout untuk 3 Kolom */
+.data-siswa-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* ID Card Styling */
+.id-card {
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.id-card:hover {
+    transform: translateY(-5px);
+}
+
+.id-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.id-card h3 {
+    color: #435579;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.id-card p {
+    font-size: 14px;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* Container Styling */
+#data-guru {
+    text-align: center;
+    padding: 20px;
+    background-color: linear-gradient(45deg, #4facfe, #00f2fe, #a1c4fd, #c2e9fb, #4facfe); /* Soft blue and teal with light accents */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+#data-guru h1 {
+    font-size: 24px;
+    color: #435579;
+    margin-bottom: 20px;
+}
+
+/* Grid Layout for Two Columns */
+.data-guru-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+/* ID Card Styling */
+.id-card {
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.id-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.id-card h3 {
+    color: #435579;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.id-card p {
+    font-size: 14px;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* Back to Top Link */
+.back-to-top {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #4facfe;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.back-to-top:hover {
+    color: #345fc4;
+}
+
+#kegiatan-kelas {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(45deg, #4facfe, #00f2fe, #a1c4fd, #c2e9fb, #4facfe); /* Soft blue and teal with light accents */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#kegiatan-kelas h2 {
+    text-align: center;
+    color: #435579;
+    margin-bottom: 20px;
+}
+
+.jadwal-kegiatan {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    background-color: linear-gradient(45deg, #4facfe, #00f2fe, #a1c4fd, #c2e9fb, #4facfe); /* Soft blue and teal with light accents */
+}
+
+.jadwal-kegiatan th,
+.jadwal-kegiatan td {
+    border: 1px solid #dddddd;
+    padding: 12px;
+}
+
+.jadwal-kegiatan th {
+    background-color: #4facfe;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.jadwal-kegiatan tr:nth-child(even) {
+    background-color: linear-gradient(45deg, #4facfe, #00f2fe, #a1c4fd, #c2e9fb, #4facfe); /* Soft blue and teal with light accents */
+}
+
+.jadwal-kegiatan tr:hover {
+    background-color:linear-gradient(45deg, #4facfe, #00f2fe, #a1c4fd, #c2e9fb, #4facfe); /* Soft blue and teal with light accents */
+    transition: background-color 0.3s ease;
+}
+/* Container Styling */
+#daftar-piket {
+    text-align: center;
+    padding: 20px;
+    background-color: linear-gradient(45deg, #4facfe, #00f2fe, #a1c4fd, #c2e9fb, #4facfe); /* Soft blue and teal with light accents */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+#daftar-piket h2 {
+    font-size: 24px;
+    color: #435579;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+/* Struktur Pikets Container */
+.struktur-piket-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Each Day's Piket */
+.struktur-piket {
+    flex: 1;
+    background: linear-gradient(45deg, #4facfe, #00f2fe, #a1c4fd, #c2e9fb, #4facfe); /* Soft blue and teal with light accents */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    color: #333;
+    max-width: 170px;
+    margin: auto;
+}
+
+.struktur-piket h3 {
+    font-size: 18px;
+    color: #435579;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.struktur-piket ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.struktur-piket ul li {
+    margin: 5px 0;
+}
+
+/* Hover Effect */
+.struktur-piket:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Back to Top Link */
+.back-to-top {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #4facfe;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.back-to-top:hover {
+    color: #345fc4;
+}
+.jadwal-pelajaran {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+.jadwal-pelajaran thead {
+    background-color: #09a6ce;
+    color: white;
+}
+
+.jadwal-pelajaran th, 
+.jadwal-pelajaran td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.jadwal-pelajaran tbody tr:nth-child(even) {
+    background-color: linear-gradient(45deg, #4facfe, #00f2fe, #a1c4fd, #c2e9fb, #4facfe); /* Soft blue and teal with light accents */
+}
+
+.jadwal-pelajaran tbody tr:hover {
+    background-color: linear-gradient(45deg, #4facfe, #00f2fe, #a1c4fd, #c2e9fb, #4facfe); /* Soft blue and teal with light accents */
+}
+
+.jadwal-pelajaran th {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section#jadwal-pelajaran {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(45deg, #4facfe, #00f2fe, #a1c4fd, #c2e9fb, #4facfe); /* Soft blue and teal with light accents */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya untuk galeri foto */
+#galeri-foto {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: linear-gradient(45deg, #4facfe, #00f2fe, #a1c4fd, #c2e9fb, #4facfe); /* Soft blue and teal with light accents */
+}
+
+#galeri-foto h2 {
+    color: linear-gradient(45deg, #4facfe, #00f2fe, #a1c4fd, #c2e9fb, #4facfe); /* Soft blue and teal with light accents */;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery-item {
+    max-width: 300px;
+    text-align: center;
+    background: linear-gradient(45deg, #4facfe, #00f2fe, #a1c4fd, #c2e9fb, #4facfe); /* Soft blue and teal with light accents */;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 5px solid #4facfe, #00f2fe, #09a6ce, #4facfe;
+}
+
+.gallery-item p {
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Tombol kembali ke atas */
+.back-to-top {
+    display: inline-block;
+    margin-top: 20px;
+    color: #0d0d0e;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.back-to-top:hover {
+    color: #345fc4;
+}
+
+    </style>
+    
+</head>
+ <body>
+    </div>
+    <button id="back-to-top" title="Kembali ke atas">⬆️</button>
+    <header class="sticky-header">
+        <h1>XII-RPL</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#data-siswa">Data Siswa</a></li>
+                <li><a href="#data-guru">Data Guru</a></li>
+                <li><a href="#struktur-kelas">Struktur Kelas</a></li>
+                <li><a href="#daftar-piket">Daftar Piket</a></li>
+                <li><a href="#jadwal-pelajaran">Jadwal Pelajaran</a></li>
+                <li><a href="#kegiatan-kelas">Kegiatan Kelas</a></li>
+                <li><a href="#galeri-foto">Galeri Foto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <main>
+        <div id="home" class="container">
+            <div class="home">
+                <style>
+                .home {
+                    text-align: center; /* Teks di tengah */
+                    padding: 100px 20px; /* Memberi jarak atas dan samping */
+                    color: #94a5a2; /* Warna teks */
+                }
+                
+                .home h1 {
+                    font-size: 36px; /* Ukuran teks judul */
+                    margin-bottom: 20px; /* Jarak antara judul dan paragraf */
+                    color: rgb(132, 153, 163); /* Warna teks judul */
+                }
+                .home-logo {
+                    max-width: 200px; /* Ukuran maksimum logo */
+        height: auto; /* Menjaga proporsi logo */
+        margin-bottom: 20px; /* Jarak antara logo dan judul */
+                }
+                .home p {
+                    font-size: 18px; /* Ukuran teks paragraf */
+                    line-height: 1.6; /* Memberikan jarak antar baris */
+                    margin: 0 auto; /* Menjaga elemen tetap di tengah */
+                    max-width: 600px; /* Membatasi lebar konten */
+                }</style>
+                <img src="RPL.png" alt="Logo XII RPL" class="home-logo">
+                <h1>Selamat Datang di Data Siswa XII RPL</h1>
+                <p>Ini adalah informasi lengkap tentang data siswa, data guru, struktur kelas, jadwal pelajaran, dan kegiatan kelas XII RPL.</p>
+                <p>Gunakan menu navigasi di atas untuk menjelajahi informasi yang tersedia.</p>
+            </div>
+        </div>
+
+        </section>
+        <section id="data-siswa">
+            <h1>DATA SISWA</h1>
+            <div class="data-siswa-container">
+                <div class="id-card">
+                <img src="fotocewe.jpg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>ALEXA MASAYU INDAH KUSUMA WARDHI</h3>
+                <P>JK:P</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,20-09-07</p>
+                <p>Alamat: Ds.Banjarejo Kec.Bancar</p>
+            </div>
+            <div class="id-card">
+                <img src="fotocewe.jpg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>AMILIA</h3>
+                <P>JK:P</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,06-08-06</p>
+                <p>Alamat: Ds.Socorejo Kec.Jenu</p>
+            </div>
+            <div class="id-card">
+                <img src="fotocowo.jpg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>ANDRE DWI SAPUTRA</h3>
+                <P>JK:l</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,07-09-06</p>
+                <p>Alamat: Ds.Remen Kec.Jenu</p>
+            </div>
+            <div class="id-card">
+                <img src="datin.jpeg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>DATIN AZKIYAH</h3>
+                <P>JK:P</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,10-06-07</p>
+                <p>Alamat: Ds.Wolutengah Kec.Kerek</p>
+            </div>
+            <div class="id-card">
+                <img src="fotocowo.jpg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>DAVA RAMANDHANI</h3>
+                <P>JK:L</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,25-09-07</p>
+                <p>Alamat: Ds.Trantang Kec.kerek</p>
+            </div>
+            <div class="id-card">
+                <img src="depinta.jpeg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>DEFINTA ARTA MEFIYANI</h3>
+                <P>JK:P</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,23-03-06</p>
+                <p>Alamat: Ds.Purworejo Kec.Jenu</p>
+            </div>
+            <div class="id-card">
+                <img src="fotocewe.jpg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>DEVIA MARTA PUTRI ANGGRAINI</h3>
+                <P>JK:P</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,23-03-06</p>
+                <p>Alamat: Ds.Temaji Kec.Jenu</p>
+            </div>
+            <div class="id-card">
+                <img src="dini.jpeg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>DINI AULIA FATKIYAH</h3>
+                <P>JK:P</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,15-09-06</p>
+                <p>Alamat: Ds.Bulojowo Kec.Bancar</p>
+            </div>
+            <div class="id-card">
+                <img src="fotocewe.jpg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>DWI OKTAVIA KHOFSOTUS SAADAH</h3>
+                <P>JK:P</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,22-10-06</p>
+                <p>Alamat: Ds.Sawir Kec.Tambakboyo</p>
+            </div>
+            <div class="id-card">
+                <img src="dwi.jpeg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>DWI RAHMAWATI</h3>
+                <P>JK:P</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,28-11-06</p>
+                <p>Alamat: Ds.Remen Kec.Jenu</p>
+            </div>
+            <div class="id-card">
+                <img src="eka.jpeg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>EKA SETYA NINGRUM</h3>
+                <P>JK:P</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,23-12-06</p>
+                <p>Alamat: Ds.Temaji Kec.Jenu</p>
+            </div>
+            <div class="id-card">
+                <img src="fotocowo.jpg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>GHYVAN ONE NADA MAHARDIKA</h3>
+                <P>JK:L</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,31-08-07</p>
+                <p>Alamat: Ds.Trantang Kec.Kerek</p>
+            </div>
+            <div class="id-card">
+                <img src="sela.jpeg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>HELVY SHELLA OKTAVIONA</h3>
+                <P>JK:P</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,09-10-06</p>
+                <p>Alamat: Ds.Klutuk Kec.Tambakboyo</p>
+            </div>
+            <div class="id-card">
+                <img src="isma.jpeg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>ISMA RIFATUN NAILI</h3>
+                <P>JK:P</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban08-11-07</p>
+                <p>Alamat: Ds.Karangasem Kec.Jenu</p>
+            </div>
+            <div class="id-card">
+                <img src="kamilia.jpeg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>KAMILATUN MAIMUNAH</h3>
+                <P>JK:P</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,30-05</p>
+                <p>Alamat: Ds.Merkawang Kec.Tambakboyo</p>
+            </div>
+            <div class="id-card">
+                <img src="kristin.jpeg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>KRISTINAWATI</h3>
+                <P>JK:P</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,24-12-07</p>
+                <p>Alamat: Ds.Wolutengah Kec.Kerek</p>
+            </div>
+            <div class="id-card">
+                <img src="fotocewe.jpg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>LITA EKA KUMALA</h3>
+                <P>JK:P</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,15-10-06</p>
+                <p>Alamat: Ds.Gadon Kec.Tambakboyo</p>
+            </div>
+            <div class="id-card">
+                <img src="fotocewe.jpg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>MADINATUL UMI SHOLEKHA</h3>
+                <P>JK:P</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,10-01-07</p>
+                <p>Alamat: Ds.Mander Kec.Tambakboyo</p>
+            </div>
+            <div class="id-card">
+                <img src="mise.jpeg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>MEISYE YULIA SUKMA RAGA</h3>
+                <P>JK:P</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,02-07-06</p>
+                <p>Alamat: Ds.Tasikharjo Kec.Jenu</p>
+            </div>
+            <div class="id-card">
+                <img src="fotocowo.jpg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>MOKHAMMAD ALWI SIHAB</h3>
+                <P>JK:L</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,30-07-06</p>
+                <p>Alamat: Ds.Sukolilo Kec.Bancar</p>
+            </div>
+            <div class="id-card">
+                <img src="fotocewe.jpg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>NINDITA EKA PUTRI</h3>
+                <P>JK:P</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,14-08-06</p>
+                <p>Alamat: Ds.Banjarejo Kec.Bancar</p>
+            </div>
+            <div class="id-card">
+                <img src="nuris.jpeg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>NURIS REVIANI SINTIA</h3>
+                <P>JK:P</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,05-05-07</p>
+                <p>Alamat: Ds.Pabeyan Kec.Tambakboyo</p>
+            </div>
+            <div class="id-card">
+                <img src="nola.jpeg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>PHAZA ANGGIE FINOLA</h3>
+                <P>JK:P</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,28-04-07</p>
+                <p>Alamat: Ds.Socorejo Kec.Jenu</p>
+            </div>
+            <div class="id-card">
+                <img src="fotocewe.jpg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>RAFICHA FIRA FEBRYANTIKA</h3>
+                <P>JK:P</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,10-02-07</p>
+                <p>Alamat: Ds.Bulujowo Kec.Bancar</p>
+            </div>
+            <div class="id-card">
+                <img src="fotocewe.jpg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>RAHMA ENGELIA NOFANZA</h3>
+                <P>JK:P</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,11-11-07</p>
+                <p>Alamat: Ds.Sidomulyo Kec.Bancar</p>
+            </div>
+            <div class="id-card">
+                <img src="risma.jpg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>RISMA AYU WULANDARI</h3>
+                <P>JK:P</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,18-03-07</p>
+                <p>Alamat: Ds.Purworejo Kec.Jenu</p>
+            </div>
+            <div class="id-card">
+                <img src="fotocewe.jpg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>ROSSANA RAMANDHANI NGESTI</h3>
+                <P>JK:P</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,01-10-06</p>
+                <p>Alamat: Ds.Bulujowo Kec.Bancar</p>
+            </div>
+            <div class="id-card">
+                <img src="salwa.jpeg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>SALWA MUTIARA ISMA WARDANI</h3>
+                <P>JK:P</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,19-01-07</p>
+                <p>Alamat: Ds.Socorejo Kec.Jenu</p>
+            </div>
+            <div class="id-card">
+                <img src="saskia.jpeg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>SASKIA DWI VADYLA</h3>
+                <P>JK:P</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,20-09-07</p>
+                <p>Alamat: Ds.Banjarejo Kec.Bancar</p>
+            </div>
+            <div class="id-card">
+                <img src="selfi.jpeg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>SELFI DINDA MAULIYANA</h3>
+                <P>JK:P</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,19-09-07</p>
+                <p>Alamat: Ds.Merkawang Kec.Tambakboyo</p>
+            </div>
+            <div class="id-card">
+                <img src="septia.jpeg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>SEPTIA KHOIRIN NIHAYA</h3>
+                <P>JK:P</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,10-09-06</p>
+                <p>Alamat: Ds.Remen Kec.Jenu</p>
+            </div>
+            <div class="id-card">
+                <img src="fotocewe.jpg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>SITI NUR ANISA</h3>
+                <P>JK:P</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,30-06-06</p>
+                <p>Alamat: Ds.Remen Kec.Jenu</p>
+            </div>
+            <div class="id-card">
+                <img src="fotocewe.jpg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>WASIATUN NAFI'AH</h3>
+                <P>JK:P</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,20-09-07</p>
+                <p>Alamat: Ds.Banjarejo Kec.Bancar</p>
+            </div>
+            <div class="id-card">
+                <img src="fotocewe.jpg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>WIDYA PUTRI LESTARI</h3>
+                <P>JK:P</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,06-08-06</p>
+                <p>Alamat: Ds.Socorejo Kec.Jenu</p>
+            </div>
+            <div class="id-card">
+                <img src="wilda.jpeg" style="width: 100px;height: 100px;border-radius: 100%;" />
+                <h3>WILDA NUR AQILA ZAFIRA</h3>
+                <P>JK:P</P>
+                <p>Kelas:XII-RPL</p>
+                <p>TTL: Tuban,05-08-07</p>
+                <p>Alamat: Ds.Ngampelrejp Kec.Bancar</p>
+            </div>
+            <a href="#" class="back-to-top">Kembali ke atas</a>
+        </section>
+
+        <section id="data-guru">
+            <h1 style="color:rgb(31, 71, 83);">DATA GURU</h1>
+            <div class="data-guru-container">
+                <div class="id-card">
+                    <img src="paknuril.jpeg" alt="NURIL AMWAR" />
+                    <h3>NURIL AMWAR</h3>
+                    <p>Mata Pelajaran: PRODUKTIF</p>
+                    <p>Alamat: DS. Bulujowo DSN. Karangcandi</p>
+                </div>
+                <div class="id-card">
+                    <img src="pakarno.jpeg" alt="SUWARNO" />
+                    <h3>SUWARNO</h3>
+                    <p>Mata Pelajaran: MAPEL PILIHAN</p>
+                    <p>Alamat: DS. Tegalrejo KEC. Merakurak</p>
+                </div>
+                <div class="id-card">
+                    <img src="buatik.jpeg" alt="CRISA ATIK SETYA" />
+                    <h3>CRISA ATIK SETYA</h3>
+                    <p>Mata Pelajaran: PRODUKTIF</p>
+                    <p>Alamat: DS. Bulujowo DSN. Karangcandi</p>
+                </div>
+                <div class="id-card">
+                    <img src="pakdiin.jpeg" alt="NURUL MUBTADIIN" />
+                    <h3>NURUL MUBTADIIN</h3>
+                    <p>Mata Pelajaran: PAI</p>
+                    <p>Alamat: DS. Dasin KEC. Tambakboyo</p>
+                </div>
+                <div class="id-card">
+                    <img src="bunurul.jpeg" alt="NURUL ZAIDAH" />
+                    <h3>NURUL ZAIDAH</h3>
+                    <p>Mata Pelajaran: BK</p>
+                    <p>Alamat: DS. Jenu</p>
+                </div>
+                <div class="id-card">
+                    <img src="butata2.jpg" alt="ARIESTA IKA SOFIANA" />
+                    <h3>ARIESTA IKA SOFIANA</h3>
+                    <p>Mata Pelajaran: MATEMATIKA DAN PKK</p>
+                    <p>Alamat: DS. Kerek</p>
+                </div>
+                <div class="id-card">
+                    <img src="butika.jpeg" alt="PRATIKA AGUSTINA" />
+                    <h3>PRATIKA AGUSTINA</h3>
+                    <p>Mata Pelajaran: BAHASA JAWA</p>
+                    <p>Alamat: Karangpacar</p>
+                </div>
+                <div class="id-card">
+                    <img src="bunurif.jpg" alt="NURUL HAMDIYAH ARIF" />
+                    <h3>NURUL HAMDIYAH ARIF</h3>
+                    <p>Mata Pelajaran: BAHASA INDONESIA</p>
+                    <p>Alamat: Bancar</p>
+                </div>
+                <div class="id-card">
+                    <img src="bulala.jpeg" alt="FARADILA EMMA FIKRISA" />
+                    <h3>FARADILA EMMA FIKRISA</h3>
+                    <p>Mata Pelajaran: PRODUKTIF</p>
+                    <p>Alamat: Sombonggede, Merakurak</p>
+                </div>
+                <div class="id-card">
+                    <img src="bumuhim.jpg" alt="MUHIMMATUL IFADAH" />
+                    <h3>MUHIMMATUL IFADAH</h3>
+                    <p>Mata Pelajaran: BAHASA INGGRIS</p>
+                    <p>Alamat:  Margosuko Kec. Bancar</p>
+            </div>
+            <a href="#" class="back-to-top">Kembali ke atas</a>
+        </section>
+        
+
+        <section id="struktur-kelas">
+            <h2>STRUKTUR KELAS</h2>
+            <div class="struktur-container">
+                <div class="struktur-item">
+                    <img src="PAKAGUS.jpg" alt="Agus Siswanto" />
+                    <h3>AGUS SISWANTO, S.Pd., M.Pd.</h3>
+                    <p><strong>Jabatan:</strong> Kepala Sekolah</p>
+                    <p><strong>Alamat:</strong> Kel. Gedungombo Kec. Semanding - Tuban</p>
+                </div>
+                <div class="struktur-item">
+                    <img src="paknuril.jpeg" alt="Nuril Anwar" />
+                    <h3>NURIL ANWAR, S.Kom., Gr.</h3>
+                    <p><strong>Jabatan:</strong> Guru dan Kakonsli RPL</p>
+                    <p><strong>Alamat:</strong> DS. Bulujowo DSN. Karangcandi</p>
+                </div>
+                <div class="struktur-item">
+                    <img src="pakdiin.jpeg" alt="Nurul Mubtadiin" />
+                    <h3>NURUL MUBTADIIN, S.Pd.I</h3>
+                    <p><strong>Jabatan:</strong> Guru</p>
+                    <p><strong>Alamat:</strong> Dasin, Kec. Tambakboyo</p>
+                </div>
+                <div class="struktur-item">
+                    <img src="risma.jpg" alt="Risma Ayu Wulandari" />
+                    <h3>RISMA AYU WULANDARI</h3>
+                    <p><strong>Jabatan:</strong> Ketua Kelas</p>
+                </div>
+                <div class="struktur-item">
+                    <img src="fotocewe.jpg" alt="Devia Marta Putri Anggraini" />
+                    <h3>DEVIA MARTA PUTRI ANGGRAINII</h3>
+                    <p><strong>Jabatan:</strong> Wakil Ketua Kelas</p>
+                </div>
+                <div class="struktur-item">
+                    <img src="fotocewe.jpg" alt="Wasiatun Nafi'ah" />
+                    <h3>WASIATUN NAFI'AH</h3>
+                    <p><strong>Jabatan:</strong> Sekretaris 1</p>
+                </div>
+                <div class="struktur-item">
+                    <img src="nola.jpeg" alt="Phaza Anggie Finola" />
+                    <h3>PHAZA ANGGIE FINOLA</h3>
+                    <p><strong>Jabatan:</strong> Sekretaris 2</p>
+                </div>
+                <div class="struktur-item">
+                    <img src="fotocewe.jpg" alt="Widya Putri Lestari" />
+                    <h3>WIDYA PUTRI LESTARI</h3>
+                    <p><strong>Jabatan:</strong> Bendahara 1</p>
+                </div>
+                <div class="struktur-item">
+                    <img src="fotocewe.jpg" alt="Siti Nur Anisa" />
+                    <h3>SITI NUR ANISA</h3>
+                    <p><strong>Jabatan:</strong> Bendahara 2</p>
+                </div>
+            </div>
+            <a href="#" class="back-to-top">Kembali ke atas</a>
+        </section>
+        
+        
+
+        <section id="daftar-piket">
+            <h2>Daftar Piket</h2>
+            <div class="struktur-piket-container">
+                <div class="struktur-piket">
+                    <h3>SENIN</h3>
+                    <ul>
+                        <li>DEVIA</li>
+                        <li>SELFI</li>
+                        <li>DAFA</li>
+                        <li>ALWI</li>
+                        <li>RISMA</li>
+                        <li>AQILA</li>
+                        <li>AULIA</li>
+                    </ul>
+                </div>
+                <div class="struktur-piket">
+                    <h3>SELASA</h3>
+                    <ul>
+                        <li>ANDRE</li>
+                        <li>GHYVAN</li>
+                        <li>KRISTIN</li>
+                        <li>REVI</li>
+                        <li>REVI</li>
+                        <li>NOVA</li>
+                        <li>KIA</li>
+                        <li>EKA</li>
+                    </ul>
+                </div>
+                <div class="struktur-piket">
+                    <h3>RABU</h3>
+                    <ul>
+                        <li>DWI</li>
+                        <li>FINOLA</li>
+                        <li>FIFI</li>
+                        <li>MILA</li>
+                        <li>ELI</li>
+                        <li>NISA</li>
+                        <li>PUTRI</li>
+                    </ul>
+                </div>
+                <div class="struktur-piket">
+                    <h3>KAMIS</h3>
+                    <ul>
+                        <li>NEHA</li>
+                        <li>ALEXA</li>
+                        <li>MISYE</li>
+                        <li>RAFICHA</li>
+                        <li>NINDITA</li>
+                        <li>ROSSANA</li>
+                        <li>FIA</li>
+                    </ul>
+                </div>
+                <div class="struktur-piket">
+                    <h3>JUMAT</h3>
+                    <ul>
+                        <li>AMEL</li>
+                        <li>DEVINTA</li>
+                        <li>SALWA</li>
+                        <li>DNA</li>
+                        <li>SELA</li>
+                        <li>DATIN</li>
+                        <li>LITA</li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#" class="back-to-top">Kembali ke atas</a>
+        </section>
+        <section id="jadwal-pelajaran">
+            <h2>Jadwal Pelajaran</h2>
+            <table class="jadwal-pelajaran">
+                <thead>
+                    <tr>
+                        <th>HARI</th>
+                        <th>Waktu</th>
+                        <th>MAPEL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SENIN</td>
+                        <td>07:00 - 03:10</td>
+                        <td>BAHASA INGGRIS, PRODUKTIF PILIHAN, PABP, BAHASA INDONESIA</td>
+                    </tr>
+                    <tr>
+                        <td>SELASA</td>
+                        <td>07:00 - 03:10</td>
+                        <td>KONSENTRASI KEAHLIAN</td>
+                    </tr>
+                    <tr>
+                        <td>RABU</td>
+                        <td>07:00 - 03:10</td>
+                        <td>KONSENTRASI KEAHLIAN</td>
+                    </tr>
+                    <tr>
+                        <td>KAMIS</td>
+                        <td>07:00 - 03:10</td>
+                        <td>PPKN, PRODUKTIF PILIHAN, BAHASA JAWA, BAHASA INGGRIS, PKK</td>
+                    </tr>
+                    <tr>
+                        <td>JUMAT</td>
+                        <td>07:00 - 11:20</td>
+                        <td>PKK, BK, MATEMATIKA</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="kegiatan-kelas">
+            <h2>Kegiatan Kelas</h2>
+            <table class="jadwal-kegiatan">
+                <thead>
+                    <tr>
+                        <th>Kegiatan</th>
+                        <th>Waktu</th>
+                        <th>Deskripsi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pelajaran</td>
+                        <td>07:00 - 03:10</td>
+                        <td>Kegiatan ini mencakup materi, praktek, dan istirahat.</td>
+                    </tr>
+                    <tr>
+                        <td>Jumat Religi</td>
+                        <td>07:00 - 08:20</td>
+                        <td>Sholat dhuha, istighosah, kultum, dan penutup.</td>
+                    </tr>
+                    <tr>
+                        <td>Classmeet</td>
+                        <td>08:00 - 12:45</td>
+                        <td>Peserta akan terlibat dalam lomba-lomba.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <a href="#" class="back-to-top">Kembali ke atas</a>
+        </section>
+       
+        <section id="galeri-foto">
+            <h2>GALERI FOTO</h2>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="makanmakan.jpeg" alt="Kegiatan makan-makan satu kelas">
+                    <p>Kegiatan makan bersama satu kelas</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="gurutamu.jpeg" alt="Kegiatan bersama guru tamu">
+                    <p>Kegiatan bersama guru tamu</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="kelas.jpg" alt="Suasana di kelas">
+                    <p>Suasana di kelas</p>
+                </div>
+            </div>
+            <a href="#" class="back-to-top">Kembali ke atas</a>
+        </section>
+        
